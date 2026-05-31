@@ -18,7 +18,8 @@ Aplicación web para restaurante: menú, carrito, pedidos con entrega y confirma
 2. En el **SQL Editor**, ejecuta en orden:
    - `supabase/schema.sql`
    - `supabase/seed.sql`
-3. (Opcional) Sube imágenes al bucket **Storage** y actualiza `image_url` en `menu_items`.
+3. El archivo `supabase/seed.sql` incluye el menú completo de la carta (mariscos, especiales, catering, bebidas, postres, etc.).
+4. (Opcional) Sube fotos de platillos al bucket **Storage** y actualiza `image_url` en `menu_items`.
 
 ### 2. Variables de entorno
 

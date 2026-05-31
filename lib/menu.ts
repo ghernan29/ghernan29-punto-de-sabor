@@ -2,10 +2,18 @@ import { supabase } from "@/lib/supabase";
 import type { MenuItem } from "@/lib/types";
 
 export const CATEGORY_ORDER = [
-  "Entradas",
-  "Platos Fuertes",
+  "Especial Diario",
+  "Mariscos",
+  "Bien Fritos",
+  "Pechuga",
+  "Arroces y Asopados",
+  "Sopas",
+  "Acompañamientos",
+  "Batidas",
+  "Jugos Naturales",
   "Bebidas",
   "Postres",
+  "Catering",
 ] as const;
 
 export function groupMenuByCategory(items: MenuItem[]): Map<string, MenuItem[]> {
