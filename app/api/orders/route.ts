@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server"
 
 import { createSupabaseAdminClient } from "@/lib/supabase"
-import type { OrderInsert } from "@/types/database"
+import type { Json, OrderInsert } from "@/types/database"
 
 type CreateOrderRequest = {
   customerName?: string
   phone?: string
   deliveryAddress?: string | null
   deliveryFee?: number
-  items?: unknown[]
+  items?: Json[]
   notes?: string | null
   orderType?: "delivery" | "pickup"
   subtotal?: number

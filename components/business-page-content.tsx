@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Instagram, MapPinned, Phone, Music2 } from "lucide-react"
+import { Camera, Users, MapPinned, Phone, Music2 } from "lucide-react"
 
 import type { BusinessInfoRow } from "@/types/database"
 
@@ -14,12 +14,12 @@ export function BusinessPageContent({
     {
       href: businessInfo.instagram_url,
       label: "Instagram",
-      icon: Instagram,
+      icon: Camera,
     },
     {
       href: businessInfo.facebook_url,
       label: "Facebook",
-      icon: Facebook,
+      icon: Users,
     },
     {
       href: businessInfo.tiktok_url,

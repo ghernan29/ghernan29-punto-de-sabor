@@ -52,6 +52,7 @@ export type Database = {
           tiktok_url?: string | null
           updated_at?: string
         }
+        Relationships: []
       }
       menu_items: {
         Row: {
@@ -90,6 +91,7 @@ export type Database = {
           sort_order?: number
           updated_at?: string
         }
+        Relationships: []
       }
       orders: {
         Row: {
@@ -137,6 +139,7 @@ export type Database = {
           total?: number
           whatsapp_message?: string
         }
+        Relationships: []
       }
     }
     Views: Record<string, never>
