@@ -1,0 +1,44 @@
+{
+  "name": "punto-de-sabor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Aplicacion web para pedidos y menu de Punto de Sabor.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghernan29/ghernan29-punto-de-sabor.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ghernan29/ghernan29-punto-de-sabor/issues"
+  },
+  "homepage": "https://github.com/ghernan29/ghernan29-punto-de-sabor#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
+    "clsx": "^2.1.1",
+    "lucide-react": "^1.17.0",
+    "next": "^14.2.35",
+    "next-pwa": "^5.6.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "@types/react": "^18.3.29",
+    "@types/react-dom": "^18.3.7",
+    "autoprefixer": "^10.5.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.35",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^5.9.3"
+  }
+}
