@@ -1,0 +1,19 @@
+{
+  "name": "Punto de Sabor",
+  "short_name": "Punto de Sabor",
+  "description": "Menú, pedidos a domicilio y ordena por WhatsApp.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fafaf9",
+  "theme_color": "#ea580c",
+  "lang": "es",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
