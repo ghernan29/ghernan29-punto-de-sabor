@@ -3,6 +3,8 @@ import { MenuSection } from "@/components/menu-section";
 import { getMenuItems } from "@/lib/data";
 import type { MenuItem } from "@/lib/types";
 
+export const dynamic = "force-dynamic";
+
 export default async function MenuPage() {
   const { data: menuItems, error, isConfigured } = await getMenuItems();
   const groupedItems = groupByCategory(menuItems);
@@ -14,22 +16,22 @@ export default async function MenuPage() {
           <p className="text-sm font-bold uppercase tracking-[0.3em] text-orange-300">Punto de Sabor</p>
           <h1 className="text-4xl font-black tracking-tight md:text-6xl">Tu antojo favorito, listo para pedir.</h1>
           <p className="text-base leading-7 text-orange-50 md:text-lg">
-            Explora nuestro menu, arma tu carrito y confirma tu pedido directamente por WhatsApp.
+            Explora nuestro menú, arma tu carrito y confirma tu pedido directamente por WhatsApp.
           </p>
         </div>
       </section>
 
       {!isConfigured ? (
         <EmptyState
-          title="Conecta Supabase para cargar el menu"
+          title="Conecta Supabase para cargar el menú"
           description="Copia .env.example a .env.local, agrega tus credenciales de Supabase y ejecuta los scripts SQL incluidos."
         />
       ) : null}
 
-      {error ? <EmptyState title="No pudimos cargar el menu" description={error} /> : null}
+      {error ? <EmptyState title="No pudimos cargar el menú" description={error} /> : null}
 
       {isConfigured && !error && menuItems.length === 0 ? (
-        <EmptyState title="Menu vacio" description="Agrega productos en la tabla menu_items para que aparezcan aqui." />
+        <EmptyState title="Menú vacío" description="Agrega productos en la tabla menu_items para que aparezcan aquí." />
       ) : null}
 
       <div className="space-y-10">

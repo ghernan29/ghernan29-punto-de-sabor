@@ -1,4 +1,4 @@
-import { Clock, Facebook, Instagram, MapPin, Phone, Send } from "lucide-react";
+import { Camera, Clock, MapPin, Phone, Send, Users } from "lucide-react";
 
 import type { BusinessInfo, Json } from "@/lib/types";
 
@@ -13,7 +13,7 @@ export function BusinessDetails({ info }: { info: BusinessInfo }) {
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_420px]">
       <section className="space-y-5 rounded-[2rem] border border-orange-100 bg-white p-6 shadow-sm">
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-600">Nuestra Pagina</p>
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-600">Nuestra Página</p>
         <h1 className="text-3xl font-black text-stone-950">{info.business_name}</h1>
         <p className="leading-7 text-stone-700">{info.description}</p>
 
@@ -33,20 +33,20 @@ export function BusinessDetails({ info }: { info: BusinessInfo }) {
             )}
           </InfoCard>
 
-          <InfoCard icon={<Phone aria-hidden="true" />} title="Telefono">
+          <InfoCard icon={<Phone aria-hidden="true" />} title="Teléfono">
             <a className="font-bold text-orange-700 hover:text-orange-800" href={`tel:${info.phone}`}>
               {info.phone}
             </a>
           </InfoCard>
         </div>
 
-        <InfoCard icon={<MapPin aria-hidden="true" />} title="Direccion">
+        <InfoCard icon={<MapPin aria-hidden="true" />} title="Dirección">
           <p className="text-sm leading-6 text-stone-600">{info.address}</p>
         </InfoCard>
 
         <div className="flex flex-wrap gap-3">
-          <SocialLink href={info.instagram_url} label="Instagram" icon={<Instagram size={18} aria-hidden="true" />} />
-          <SocialLink href={info.facebook_url} label="Facebook" icon={<Facebook size={18} aria-hidden="true" />} />
+          <SocialLink href={info.instagram_url} label="Instagram" icon={<Camera size={18} aria-hidden="true" />} />
+          <SocialLink href={info.facebook_url} label="Facebook" icon={<Users size={18} aria-hidden="true" />} />
           <SocialLink href={info.tiktok_url} label="TikTok" icon={<Send size={18} aria-hidden="true" />} />
         </div>
       </section>
@@ -62,7 +62,7 @@ export function BusinessDetails({ info }: { info: BusinessInfo }) {
           />
         ) : (
           <div className="flex h-[420px] items-center justify-center bg-orange-100 px-8 text-center font-bold text-orange-800">
-            Agrega un map_embed_url en Supabase para mostrar el mapa aqui.
+            Agrega un map_embed_url en Supabase para mostrar el mapa aquí.
           </div>
         )}
       </aside>

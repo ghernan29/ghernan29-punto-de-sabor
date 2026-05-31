@@ -8,9 +8,9 @@ import { useCart } from "@/components/cart-provider";
 import { createQuickWhatsAppUrl } from "@/lib/whatsapp";
 
 const internalItems = [
-  { href: "/", label: "Menu", icon: Home },
+  { href: "/", label: "Menú", icon: Home },
   { href: "/carrito", label: "Carrito", icon: ShoppingBag },
-  { href: "/pagina", label: "Pagina", icon: Info }
+  { href: "/pagina", label: "Página", icon: Info }
 ];
 
 export function BottomNav() {

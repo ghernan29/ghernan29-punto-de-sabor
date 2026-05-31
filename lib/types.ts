@@ -40,6 +40,7 @@ export type Database = {
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [];
       };
       business_info: {
         Row: {
@@ -84,6 +85,7 @@ export type Database = {
           created_at?: string;
           updated_at?: string;
         };
+        Relationships: [];
       };
       orders: {
         Row: {
@@ -128,6 +130,7 @@ export type Database = {
           status?: "pending_whatsapp" | "confirmed" | "cancelled" | "completed";
           created_at?: string;
         };
+        Relationships: [];
       };
     };
     Views: Record<string, never>;

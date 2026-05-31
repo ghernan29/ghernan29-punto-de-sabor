@@ -27,7 +27,7 @@ export function createWhatsAppUrl(message: string, phone = appConfig.whatsappNum
 }
 
 export function createQuickWhatsAppUrl() {
-  return createWhatsAppUrl("Hola Punto de Sabor, me gustaria hacer una consulta.");
+  return createWhatsAppUrl("Hola Punto de Sabor, me gustaría hacer una consulta.");
 }
 
 export function buildOrderMessage(order: OrderMessageInput) {
@@ -40,16 +40,16 @@ export function buildOrderMessage(order: OrderMessageInput) {
     ]),
     "",
     `Subtotal: ${formatMoney(order.subtotal)}`,
-    `Envio: ${formatMoney(order.deliveryFee)}`,
+    `Envío: ${formatMoney(order.deliveryFee)}`,
     `Total: ${formatMoney(order.total)}`,
     "",
     `Tipo: ${order.deliveryType === "delivery" ? "Entrega a domicilio" : "Recoger en tienda"}`,
     `Nombre: ${order.customerName}`,
-    `Telefono: ${order.customerPhone}`
+    `Teléfono: ${order.customerPhone}`
   ];
 
   if (order.deliveryType === "delivery" && order.deliveryAddress) {
-    lines.push(`Direccion: ${order.deliveryAddress}`);
+    lines.push(`Dirección: ${order.deliveryAddress}`);
   }
 
   if (order.notes) {

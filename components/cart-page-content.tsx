@@ -13,12 +13,12 @@ export function CartPageContent() {
   if (items.length === 0) {
     return (
       <div className="space-y-6">
-        <EmptyState title="Tu carrito esta vacio" description="Explora el menu y agrega tus antojos favoritos para preparar tu pedido." />
+        <EmptyState title="Tu carrito está vacío" description="Explora el menú y agrega tus antojos favoritos para preparar tu pedido." />
         <Link
           href="/"
           className="inline-flex rounded-full bg-orange-600 px-5 py-3 font-black text-white shadow-sm transition hover:bg-orange-700"
         >
-          Ver menu
+          Ver menú
         </Link>
       </div>
     );

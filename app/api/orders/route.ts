@@ -9,7 +9,7 @@ export async function POST(request: Request) {
   const supabase = createSupabaseClient();
 
   if (!supabase) {
-    return NextResponse.json({ error: "Supabase no esta configurado." }, { status: 500 });
+    return NextResponse.json({ error: "Supabase no está configurado." }, { status: 500 });
   }
 
   let payload: OrderPayload;
@@ -17,7 +17,7 @@ export async function POST(request: Request) {
   try {
     payload = (await request.json()) as OrderPayload;
   } catch {
-    return NextResponse.json({ error: "El pedido no tiene un formato valido." }, { status: 400 });
+    return NextResponse.json({ error: "El pedido no tiene un formato válido." }, { status: 400 });
   }
 
   const validationError = validateOrder(payload);
@@ -53,15 +53,15 @@ function validateOrder(payload: OrderPayload) {
   }
 
   if (!payload.customer_phone?.trim()) {
-    return "El telefono es obligatorio.";
+    return "El teléfono es obligatorio.";
   }
 
   if (payload.delivery_type !== "delivery" && payload.delivery_type !== "pickup") {
-    return "El tipo de entrega no es valido.";
+    return "El tipo de entrega no es válido.";
   }
 
   if (payload.delivery_type === "delivery" && !payload.delivery_address?.trim()) {
-    return "La direccion es obligatoria para entregas.";
+    return "La dirección es obligatoria para entregas.";
   }
 
   if (!Array.isArray(payload.items) || payload.items.length === 0) {
@@ -69,7 +69,7 @@ function validateOrder(payload: OrderPayload) {
   }
 
   if (!isValidAmount(payload.subtotal) || !isValidAmount(payload.delivery_fee) || !isValidAmount(payload.total)) {
-    return "Los totales del pedido no son validos.";
+    return "Los totales del pedido no son válidos.";
   }
 
   return null;

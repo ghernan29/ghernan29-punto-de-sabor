@@ -5,7 +5,7 @@ export function MenuSection({ category, items }: { category: string; items: Menu
   return (
     <section className="space-y-4" aria-labelledby={`category-${category}`}>
       <div>
-        <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-600">Categoria</p>
+        <p className="text-sm font-bold uppercase tracking-[0.25em] text-orange-600">Categoría</p>
         <h2 id={`category-${category}`} className="text-2xl font-black text-stone-950">
           {category}
         </h2>

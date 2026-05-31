@@ -56,7 +56,7 @@ export function CheckoutForm() {
 
     if (!hasWhatsappConfig()) {
       setStatus("error");
-      setMessage("Falta configurar el numero de WhatsApp.");
+      setMessage("Falta configurar el número de WhatsApp.");
       return;
     }
 
@@ -68,13 +68,13 @@ export function CheckoutForm() {
 
     if (subtotal < appConfig.minimumOrderAmount) {
       setStatus("error");
-      setMessage(`El pedido minimo es ${formatMoney(appConfig.minimumOrderAmount)}.`);
+      setMessage(`El pedido mínimo es ${formatMoney(appConfig.minimumOrderAmount)}.`);
       return;
     }
 
     if (form.deliveryType === "delivery" && !form.deliveryAddress.trim()) {
       setStatus("error");
-      setMessage("Escribe la direccion de entrega.");
+      setMessage("Escribe la dirección de entrega.");
       return;
     }
 
@@ -159,7 +159,7 @@ export function CheckoutForm() {
       </label>
 
       <label className="block space-y-2">
-        <span className="text-sm font-bold text-stone-700">Telefono</span>
+        <span className="text-sm font-bold text-stone-700">Teléfono</span>
         <input
           required
           inputMode="tel"
@@ -172,13 +172,13 @@ export function CheckoutForm() {
 
       {form.deliveryType === "delivery" ? (
         <label className="block space-y-2">
-          <span className="text-sm font-bold text-stone-700">Direccion de entrega</span>
+          <span className="text-sm font-bold text-stone-700">Dirección de entrega</span>
           <textarea
             required
             value={form.deliveryAddress}
             onChange={(event) => setForm((current) => ({ ...current, deliveryAddress: event.target.value }))}
             className="min-h-24 w-full rounded-2xl border border-orange-100 bg-amber-50 px-4 py-3 outline-none ring-orange-300 focus:ring-4"
-            placeholder="Calle, numero, colonia y referencias"
+            placeholder="Calle, número, colonia y referencias"
           />
         </label>
       ) : null}
@@ -195,10 +195,10 @@ export function CheckoutForm() {
 
       <div className="space-y-2 rounded-2xl bg-stone-950 p-4 text-white">
         <SummaryRow label="Subtotal" value={formatMoney(subtotal)} />
-        <SummaryRow label="Envio" value={formatMoney(deliveryFee)} />
+        <SummaryRow label="Envío" value={formatMoney(deliveryFee)} />
         <SummaryRow label="Total" value={formatMoney(total)} strong />
         {appConfig.minimumOrderAmount > 0 ? (
-          <p className="pt-2 text-xs text-orange-100">Pedido minimo: {formatMoney(appConfig.minimumOrderAmount)}</p>
+          <p className="pt-2 text-xs text-orange-100">Pedido mínimo: {formatMoney(appConfig.minimumOrderAmount)}</p>
         ) : null}
       </div>
 

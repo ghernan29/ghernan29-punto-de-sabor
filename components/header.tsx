@@ -15,13 +15,13 @@ export function Header() {
         </Link>
         <nav className="hidden items-center gap-6 text-sm font-bold text-stone-700 md:flex">
           <Link className="hover:text-orange-700" href="/">
-            Menu
+            Menú
           </Link>
           <Link className="hover:text-orange-700" href="/carrito">
             Carrito
           </Link>
           <Link className="hover:text-orange-700" href="/pagina">
-            Nuestra Pagina
+            Nuestra Página
           </Link>
         </nav>
       </div>
